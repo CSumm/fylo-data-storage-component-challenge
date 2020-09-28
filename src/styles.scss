@@ -29,7 +29,7 @@ $font-family: 'Raleway', sans-serif;
     padding: 20px;
     border-radius: 10px 100px 10px 10px;
 
-    .logo {
+    .fylo-logo {
       width: 50%;
       margin: 20px 0 0 21px;
     }
@@ -43,7 +43,6 @@ $font-family: 'Raleway', sans-serif;
         align-items: center;
         background-color: $icon-background;
         padding: 15px;
-        width: fit-content;
         margin-right: 16px;
         border-radius: 10px;
       }
@@ -78,7 +77,7 @@ $font-family: 'Raleway', sans-serif;
       $progress-gradient-from,
       $progress-gradient-to
     );;
-   animation: continueToRotate 1s linear infinite alternate;
+   animation: pingPong 1s linear infinite alternate;
     }
   
     .section-loader__inner-item {
@@ -98,10 +97,9 @@ $font-family: 'Raleway', sans-serif;
       margin-top: 15px;
       background-color: $icon-background;
       border-radius: 20px 20px 20px 20px;
-      position: relative;
 
       &__fill {
-        width: 75%;
+        width: 0%;
         margin-left: 2px;
         height: 13px;
         border-radius: 20px 20px 20px 20px;
@@ -109,8 +107,7 @@ $font-family: 'Raleway', sans-serif;
           $progress-gradient-from,
           $progress-gradient-to
         );
-        transform: scaleX(0);
-        animation: expand-on-load 1s ease-in-out 5s forwards;
+        animation: expand-on-load 1s ease-in-out 4s forwards;
       }
 
       &__knob {
@@ -138,14 +135,13 @@ $font-family: 'Raleway', sans-serif;
       position: relative;
       top: 30px;
       left: 15%;
-      justify-self: center;
       width: 182px;
       height: 72px;
       border-radius: 10px;
       background-color: #fff;
       color: #000;
       opacity: 0;
-      animation: fadeIn 0.5s ease-in 4s forwards;
+      animation: fadeIn 0.5s ease-in 5s forwards;
     }
 
     &__gbs-left-value {
@@ -196,7 +192,7 @@ $font-family: 'Raleway', sans-serif;
       padding: 20px;
       border-radius: 10px 100px 10px 10px;
   
-      .logo {
+      .fylo-logo {
         width: 50%;
         margin: 20px 0 0 21px;
       }
@@ -210,7 +206,6 @@ $font-family: 'Raleway', sans-serif;
           align-items: center;
           background-color: $icon-background;
           padding: 15px;
-          width: fit-content;
           margin-right: 16px;
           border-radius: 10px;
         }
@@ -229,7 +224,7 @@ $font-family: 'Raleway', sans-serif;
       $progress-gradient-from,
       $progress-gradient-to
     );;
-   animation: continueToRotate 1s linear infinite alternate;
+   animation: pingPong 1s linear infinite alternate;
     }
 
     .section-loader__inner-item {
@@ -244,8 +239,6 @@ $font-family: 'Raleway', sans-serif;
     .storage-amount-info {
       background: $section-color;
       width: 30%;
-      height: 20%;
-      align-self: flex-end;
       padding: 35px;
       color: hsl(243, 100%, 93%);
       border-radius: 10px;
@@ -254,10 +247,6 @@ $font-family: 'Raleway', sans-serif;
       &__content {
         opacity: 0;
         animation: fadeIn 0.2s ease-in forwards 3s;
-      }
-  
-      &__heading {
-          font-weight: 400;
       }
   
       .progress-bar {
@@ -271,7 +260,7 @@ $font-family: 'Raleway', sans-serif;
         position: relative;
   
         &__fill {
-          width: 75%;
+          width: 0%;
           margin-left: 2px;
           height: 13px;
           border-radius: 20px 20px 20px 20px;
@@ -279,8 +268,7 @@ $font-family: 'Raleway', sans-serif;
             $progress-gradient-from,
             $progress-gradient-to
           );
-          transform: scaleX(0);
-          animation: expand-on-load 1s ease-in-out 5s forwards;
+          animation: expand-on-load 1s ease-in-out 4s forwards;
         }
   
         &__knob {
@@ -309,15 +297,13 @@ $font-family: 'Raleway', sans-serif;
         position: absolute;
         bottom: 85%;
         right: 8%;
-        justify-self: center;
         width: 182px;
         height: 72px;
         border-radius: 10px 10px 0 10px;
         background-color: #ffffff;
         color: #000;
-        z-index: 999;
         opacity: 0;
-        animation: fadeIn 0.5s ease-in 4s forwards;
+        animation: fadeIn 0.5s ease-in 5s forwards;
 
         #{$this}::after {
             content: '';
@@ -361,10 +347,10 @@ $font-family: 'Raleway', sans-serif;
 
   @keyframes expand-on-load {
     0% {
-     transform-origin: left;
+    width: 0;
     }
     100% {
-      transform: scaleX(1);
+      width: 75%;
     }
   }
 
@@ -377,7 +363,7 @@ $font-family: 'Raleway', sans-serif;
     }
   }
 
-  @keyframes continueToRotate {
+  @keyframes pingPong {
     0% {
       transform: translateY(0);
     }

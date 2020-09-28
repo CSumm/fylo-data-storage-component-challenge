@@ -19,7 +19,7 @@
     width: 80%;
     padding: 20px;
     border-radius: 10px 100px 10px 10px; }
-    .header .logo {
+    .header .fylo-logo {
       width: 50%;
       margin: 20px 0 0 21px; }
     .header__icons {
@@ -30,7 +30,6 @@
         align-items: center;
         background-color: #0c122c;
         padding: 15px;
-        width: fit-content;
         margin-right: 16px;
         border-radius: 10px; }
   .storage-amount-info {
@@ -53,7 +52,7 @@
       padding: 20px;
       border-radius: 50%;
       background: linear-gradient(#ffa399, #ff4d97);
-      animation: continueToRotate 1s linear infinite alternate; }
+      animation: pingPong 1s linear infinite alternate; }
     .storage-amount-info .section-loader__inner-item {
       position: absolute;
       width: 60%;
@@ -68,16 +67,14 @@
       height: 20px;
       margin-top: 15px;
       background-color: #0c122c;
-      border-radius: 20px 20px 20px 20px;
-      position: relative; }
+      border-radius: 20px 20px 20px 20px; }
       .storage-amount-info .progress-bar__fill {
-        width: 75%;
+        width: 0%;
         margin-left: 2px;
         height: 13px;
         border-radius: 20px 20px 20px 20px;
         background: linear-gradient(#ffa399, #ff4d97);
-        transform: scaleX(0);
-        animation: expand-on-load 1s ease-in-out 5s forwards; }
+        animation: expand-on-load 1s ease-in-out 4s forwards; }
       .storage-amount-info .progress-bar__knob {
         position: relative;
         border-radius: 50px;
@@ -98,14 +95,13 @@
       position: relative;
       top: 30px;
       left: 15%;
-      justify-self: center;
       width: 182px;
       height: 72px;
       border-radius: 10px;
       background-color: #fff;
       color: #000;
       opacity: 0;
-      animation: fadeIn 0.5s ease-in 4s forwards; }
+      animation: fadeIn 0.5s ease-in 5s forwards; }
     .storage-amount-info__gbs-left-value {
       font-size: 2.5rem;
       font-weight: 700; }
@@ -141,7 +137,7 @@
     width: 20%;
     padding: 20px;
     border-radius: 10px 100px 10px 10px; }
-    .header .logo {
+    .header .fylo-logo {
       width: 50%;
       margin: 20px 0 0 21px; }
     .header__icons {
@@ -152,7 +148,6 @@
         align-items: center;
         background-color: #0c122c;
         padding: 15px;
-        width: fit-content;
         margin-right: 16px;
         border-radius: 10px; }
   #section-loader {
@@ -164,7 +159,7 @@
     padding: 20px;
     border-radius: 50%;
     background: linear-gradient(#ffa399, #ff4d97);
-    animation: continueToRotate 1s linear infinite alternate; }
+    animation: pingPong 1s linear infinite alternate; }
   .section-loader__inner-item {
     position: absolute;
     width: 60%;
@@ -175,8 +170,6 @@
   .storage-amount-info {
     background: #1e2d69;
     width: 30%;
-    height: 20%;
-    align-self: flex-end;
     padding: 35px;
     color: #dddbff;
     border-radius: 10px;
@@ -184,8 +177,6 @@
     .storage-amount-info__content {
       opacity: 0;
       animation: fadeIn 0.2s ease-in forwards 3s; }
-    .storage-amount-info__heading {
-      font-weight: 400; }
     .storage-amount-info .progress-bar {
       display: flex;
       align-items: center;
@@ -196,13 +187,12 @@
       border-radius: 20px 20px 20px 20px;
       position: relative; }
       .storage-amount-info .progress-bar__fill {
-        width: 75%;
+        width: 0%;
         margin-left: 2px;
         height: 13px;
         border-radius: 20px 20px 20px 20px;
         background: linear-gradient(#ffa399, #ff4d97);
-        transform: scaleX(0);
-        animation: expand-on-load 1s ease-in-out 5s forwards; }
+        animation: expand-on-load 1s ease-in-out 4s forwards; }
       .storage-amount-info .progress-bar__knob {
         position: relative;
         border-radius: 50px;
@@ -223,15 +213,13 @@
       position: absolute;
       bottom: 85%;
       right: 8%;
-      justify-self: center;
       width: 182px;
       height: 72px;
       border-radius: 10px 10px 0 10px;
       background-color: #ffffff;
       color: #000;
-      z-index: 999;
       opacity: 0;
-      animation: fadeIn 0.5s ease-in 4s forwards; }
+      animation: fadeIn 0.5s ease-in 5s forwards; }
       .storage-amount-info__status ::after {
         content: '';
         position: absolute;
@@ -262,9 +250,9 @@
 
 @keyframes expand-on-load {
   0% {
-    transform-origin: left; }
+    width: 0; }
   100% {
-    transform: scaleX(1); } }
+    width: 75%; } }
 
 @keyframes fadeIn {
   0% {
@@ -272,7 +260,7 @@
   100% {
     opacity: 1; } }
 
-@keyframes continueToRotate {
+@keyframes pingPong {
   0% {
     transform: translateY(0); }
   100% {
