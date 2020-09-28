@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+@media (max-width: 1439px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url(../images/bg-mobile.png) no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Raleway", sans-serif; }
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 121px 25px 16px 25px;
+    background-color: #1e2d69;
+    width: 80%;
+    padding: 20px;
+    border-radius: 10px 100px 10px 10px; }
+    .header .logo {
+      width: 50%;
+      margin: 20px 0 0 21px; }
+    .header__icons {
+      margin: 40px 0 0 21px;
+      display: flex; }
+      .header__icons .icon-wrapper {
+        display: flex;
+        align-items: center;
+        background-color: #0c122c;
+        padding: 15px;
+        width: fit-content;
+        margin-right: 16px;
+        border-radius: 10px; }
+  .storage-amount-info {
+    background: #1e2d69;
+    padding: 32px 35px 0px 35px;
+    color: #dddbff;
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeIn 0.2s ease-in forwards 3s; }
+    .storage-amount-info__heading {
+      font-weight: 400; }
+    .storage-amount-info .progress-bar {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 20px;
+      margin-top: 15px;
+      background-color: #0c122c;
+      border-radius: 20px 20px 20px 20px;
+      position: relative; }
+      .storage-amount-info .progress-bar__fill {
+        width: 75%;
+        margin-left: 2px;
+        height: 13px;
+        border-radius: 20px 20px 20px 20px;
+        background: linear-gradient(#ffa399, #ff4d97);
+        transform: scaleX(0);
+        animation: expand-on-load 1s ease-in-out 5s forwards; }
+      .storage-amount-info .progress-bar__knob {
+        position: relative;
+        border-radius: 50px;
+        background-color: #fff;
+        border: 1px solid #979797;
+        border-style: inset;
+        width: 10px;
+        height: 10px;
+        left: 93%; }
+    .storage-amount-info .progress-bar__value-descriptors {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px; }
+    .storage-amount-info__status {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      top: 30px;
+      left: 15%;
+      justify-self: center;
+      width: 182px;
+      height: 72px;
+      border-radius: 10px;
+      background-color: #fff;
+      color: #000;
+      opacity: 0;
+      animation: fadeIn 0.5s ease-in 4s forwards; }
+    .storage-amount-info__gbs-left-value {
+      font-size: 2.5rem;
+      font-weight: 700; }
+    .storage-amount-info__gbs-left-text {
+      margin: 5px 0 0 10px;
+      text-transform: uppercase;
+      color: #848794;
+      font-weight: 700; }
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 50px;
+    color: #dddbff;
+    padding: 20px; }
+    .attribution a {
+      color: #3e52a3; } }
+
+@media (min-width: 1440px) {
+  body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    background: url(../images/bg-desktop.png) no-repeat center center fixed;
+    background-size: cover;
+    font-family: "Raleway", sans-serif; }
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 200px 25px 0 25px;
+    background-color: #1e2d69;
+    width: 20%;
+    padding: 20px;
+    border-radius: 10px 100px 10px 10px; }
+    .header .logo {
+      width: 50%;
+      margin: 20px 0 0 21px; }
+    .header__icons {
+      margin: 40px 0 0 21px;
+      display: flex; }
+      .header__icons .icon-wrapper {
+        display: flex;
+        align-items: center;
+        background-color: #0c122c;
+        padding: 15px;
+        width: fit-content;
+        margin-right: 16px;
+        border-radius: 10px; }
+  #section-loader {
+    width: 20%;
+    height: 30%;
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    padding: 20px;
+    border-radius: 50%;
+    background: linear-gradient(#ffa399, #ff4d97);
+    animation: continueToRotate 1s linear infinite alternate; }
+  .section-loader__left-eye {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #fff; }
+  .section-loader__right-eye {
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #fff; }
+  .storage-amount-info {
+    background: #1e2d69;
+    width: 30%;
+    height: 20%;
+    align-self: flex-end;
+    padding: 35px;
+    color: #dddbff;
+    border-radius: 10px;
+    position: relative; }
+    .storage-amount-info__content {
+      opacity: 0;
+      animation: fadeIn 0.2s ease-in forwards 3s; }
+    .storage-amount-info__heading {
+      font-weight: 400; }
+    .storage-amount-info .progress-bar {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 20px;
+      margin-top: 15px;
+      background-color: #0c122c;
+      border-radius: 20px 20px 20px 20px;
+      position: relative; }
+      .storage-amount-info .progress-bar__fill {
+        width: 75%;
+        margin-left: 2px;
+        height: 13px;
+        border-radius: 20px 20px 20px 20px;
+        background: linear-gradient(#ffa399, #ff4d97);
+        transform: scaleX(0);
+        animation: expand-on-load 1s ease-in-out 5s forwards; }
+      .storage-amount-info .progress-bar__knob {
+        position: relative;
+        border-radius: 50px;
+        background-color: #fff;
+        border: 1px solid #979797;
+        border-style: inset;
+        width: 10px;
+        height: 10px;
+        left: 96%; }
+    .storage-amount-info .progress-bar__value-descriptors {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px; }
+    .storage-amount-info__status {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 85%;
+      right: 8%;
+      justify-self: center;
+      width: 182px;
+      height: 72px;
+      border-radius: 10px 10px 0 10px;
+      background-color: #ffffff;
+      color: #000;
+      z-index: 999;
+      opacity: 0;
+      animation: fadeIn 0.5s ease-in 4s forwards; }
+      .storage-amount-info__status ::after {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        right: 0px;
+        width: 0;
+        height: 0;
+        border-right: 2px solid transparent;
+        border-left: 20px solid transparent;
+        border-top: 30px solid white;
+        z-index: 1; }
+    .storage-amount-info__gbs-left-value {
+      font-size: 2.5rem;
+      font-weight: 700; }
+    .storage-amount-info__gbs-left-text {
+      margin: 5px 0 0 10px;
+      text-transform: uppercase;
+      color: #848794;
+      font-weight: 700; }
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    width: 100%;
+    color: #dddbff;
+    padding: 20px; }
+    .attribution a {
+      color: #3e52a3; } }
+
+@keyframes expand-on-load {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left; }
+  100% {
+    transform: scaleX(1); } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes continueToRotate {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(30px); } }
