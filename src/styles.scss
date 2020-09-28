@@ -189,7 +189,7 @@ $font-family: 'Raleway', sans-serif;
       margin: 200px 25px 0 25px;
       background-color: $section-color;
       width: 20%;
-      padding: 20px;
+      padding: 20px 20px 40px 20px;
       border-radius: 10px 100px 10px 10px;
   
       .fylo-logo {
@@ -198,7 +198,7 @@ $font-family: 'Raleway', sans-serif;
       }
   
       &__icons {
-        margin: 40px 0 0 21px;
+        margin: 30px 0 0 21px;
         display: flex;
   
         .icon-wrapper {
